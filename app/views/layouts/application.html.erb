@@ -20,15 +20,26 @@
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-      <div class="navbar-header">
-        <%= link_to "Live Love Laugh Conference", root_path, :class => "navbar-brand" %>
-      </div>
+        <%= link_to image_tag('logo.svg'), root_path, class: 'logo-nav' %>
     </div>
   </nav>
-  <div class="container">
+  <div class="container-fluid">
 
     <%= yield %>
 
   </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <p>© 2015 - All Rights Reserved // Live &hearts; Love &hearts; Laugh</p>
+          <p><a href="http://solmiami.org" target="_blank">Spring of Life Fellowship</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
 </body>
 </html>
