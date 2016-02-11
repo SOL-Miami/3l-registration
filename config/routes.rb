@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  get 'pages/home'
+
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :registers
 
 
-  root 'registers#new'
+  resources :attendees, only: [:create]
+
+
+  root 'pages#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
