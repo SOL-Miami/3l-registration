@@ -25,13 +25,31 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'bootstrap-sass', '~> 3.3.3'
-gem 'font-awesome-rails', '~> 4.3.0.0'
-gem 'devise', '~> 3.4.1'
-gem 'sendgrid', '~> 1.2.0'
-gem 'activeadmin', github: 'activeadmin', branch: 'master'
-gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'master'
-gem 'bootstrap-generators', '~> 3.3.1'
+
+# Layout / Views / Assets
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'haml'
+
+# Engine
+gem 'puma'
+
+# Database / Models
+gem 'pg'
+gem 'decent_exposure'
+
+# Security / Authentication / Authorize
+gem 'activeadmin', github: 'activeadmin'
+gem 'ransack'
+gem 'devise'
+
+# Tools
+gem 'awesome_print', '~> 1.6.1'
+gem 'rack-timeout'
+
+# Heroku/Dokku
+gem 'rails_12factor'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -52,7 +70,5 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-group :production do
-  gem 'pg' # Postgresql DB
-  gem 'rails_12factor' # Heroku asset handler
-end
+
+ruby '2.2.2'
