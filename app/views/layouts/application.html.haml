@@ -1,15 +1,17 @@
 !!!
 %html
   %head
-  %meta{:charset => "utf-8"}
-  %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
-  %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
-  %meta{:content => "", :name => "description"}
-  %meta{:content => "", :name => "author"}
-  %title Live Love Laugh | Conference Signup
-  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
-  = csrf_meta_tags
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+
+
+    %title Live Love Laugh | Conference Signup
+
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+
+    = csrf_meta_tags
 
   %body
     %nav.navbar.navbar-default.navbar-fixed-top
@@ -18,7 +20,7 @@
           = link_to inline_svg('logo.svg'), root_path, class: 'navbar-brand'
 
     = yield
-    
+
     %footer
       .container
         .row
