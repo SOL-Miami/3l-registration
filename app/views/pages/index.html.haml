@@ -1,18 +1,29 @@
 %section.top
 
+%section.form
+  .container
+    .row
+      .col-xs-12
+        %h1.tcenter
+          Register
 
-%h1 Home
-= form_for attendee do |f|
-  = f.label :first_name
-  = f.text_field :first_name
-
-  = f.label :last_name
-  = f.text_field :last_name
-
-  = f.label :email
-  = f.text_field :email
-
-  = f.label :phone
-  = f.text_field :phone
-
-  = f.submit
+        = form_for attendee, html: { class: 'form-horizontal' } do |f|
+          .row
+            .col-xs-12.col-sm-6.col-sm-offset-3
+              %h4 First Name:
+              = f.text_field :first_name, class: 'form-control', required: true
+          .row
+            .col-xs-12.col-sm-6.col-sm-offset-3
+              %h4 Last Name:
+              = f.text_field :last_name, class: 'form-control', required: true
+          .row
+            .col-xs-12.col-sm-6.col-sm-offset-3
+              %h4 Email:
+              = f.text_field :email, class: 'form-control', required: true, type: 'email'
+          .row
+            .col-xs-12.col-sm-6.col-sm-offset-3
+              %h4 Phone:
+              = f.text_field :phone, class: 'form-control', required: true, type: 'tel'
+          .row.form-actions
+            .col-xs-12.col-sm-6.col-sm-offset-3
+              = f.submit 'Submit', class: 'btn btn-default'

@@ -1,7 +1,11 @@
+$lato: 'Lato', sans-serif;
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body { background: #fef3f4; }
+h1 { font-family: $lato; font-weight: 300; }
+h4 { font-family: $lato; }
 .navbar-default {
  background-color: #ff9498;
  border-color: rgba(0,0,0,.1);
@@ -30,6 +34,11 @@
   background-size: cover;
   background-position: bottom center;
 }
+
+.tcenter { text-align: center; }
+
+.form { padding: 50px 0; }
+.form-actions { margin: 30px 0 0; text-align: center; }
 
 footer {
   .row {
