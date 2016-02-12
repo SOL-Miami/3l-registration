@@ -4,7 +4,7 @@ class AttendeesController < ApplicationController
   def create
     respond_to do |format|
       if attendee.save
-        format.html { redirect_to root_path, notice: 'Thanks You for your submission' }
+        format.html { redirect_to thanks_path, notice: 'Thanks You for your submission' }
         format.json { render json: attendee, status: :created, location: attendee }
       else
         format.html { render action: "new" }

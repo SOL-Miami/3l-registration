@@ -1,30 +1,18 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
-body {
-  .container-fluid{
-    padding-left: 0px;
-    padding-right: 0px;
-    overflow-x: hidden;
-  }
-}
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
- .navbar-inverse {
-   background-color: #8a0411;
- }
+.navbar-default {
+ background-color: #ff9498;
+ border-color: rgba(0,0,0,.1);
+ height: 60px;
+}
+.navbar-brand {
+  padding: 10px 0;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
 
 .logo-nav {
    width: 100%;
@@ -36,64 +24,11 @@ body {
 }
 
 .top {
-  height: 50vh;
-  background-image:url(image-path("top.jpg"));
+  min-height: 600px;
+  background-image: image-url("main-1.jpg");
   background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-  .col-md-4 {
-    margin-top: 50px;
-  }
-}
-.form {
-
-  padding-top: 50px;
-  padding-bottom: 100px;
-  h1 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: #8a0411;
-    text-align: center;
-    font-size: 40px;
-  }
-  hr {
-    width: 75px;
-    border-top: 1px solid #8a0411;
-    margin-top:0px
-  }
-  h2 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    text-align: left;
-    color: #000000;
-  }
-
-  .register {
-    margin-top:20px !important;
-    padding: 15px 20px;
-    background: transparent;
-    border-radius: 2px;
-    display: block;
-    margin: 0 auto;
-    border: #8a0411 solid 1px;
-    color: #8a0411;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    text-shadow: none;
-    box-shadow: none;
-    &:hover {
-      color: #ffffff !important;
-      background: #8a0411 !important;
-    }
-  }
-
-  .form-control {
-    width: 100%;
-  }
+  background-position: bottom center;
 }
 
 footer {

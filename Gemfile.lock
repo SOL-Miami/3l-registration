@@ -109,6 +109,10 @@ GEM
       has_scope (~> 0.6.0.rc)
       railties (>= 3.2, < 5)
       responders
+    inline_svg (0.6.1)
+      activesupport (>= 4.0.4)
+      loofah (>= 2.0)
+      nokogiri (~> 1.6)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -231,6 +235,7 @@ DEPENDENCIES
   devise
   font-awesome-rails
   haml
+  inline_svg
   jbuilder (~> 2.0)
   jquery-rails
   pg
