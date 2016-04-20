@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
 
   resources :attendees, only: [:create]
+  resources :testimonies, only: [:create]
   get '/thanks' => 'pages#thanks'
 
 
