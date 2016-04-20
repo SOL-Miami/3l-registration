@@ -6,15 +6,14 @@
     .row
       .col-xs-12
         %h1.tcenter
-          Register
+          Testimony
 
-        = form_for attendee, html: { class: 'form-horizontal' } do |f|
+        = form_for testimony, html: { class: 'form-horizontal' } do |f|
           .row
-            .col-xs-12.col-sm-6.col-sm-offset-3
+            .col-xs-12.col-sm-3.col-sm-offset-3
               %h4 First Name:
               = f.text_field :first_name, class: 'form-control'
-          .row
-            .col-xs-12.col-sm-6.col-sm-offset-3
+            .col-xs-12.col-sm-3
               %h4 Last Name:
               = f.text_field :last_name, class: 'form-control'
           .row
@@ -23,19 +22,49 @@
               = f.text_field :email, class: 'form-control'
           .row
             .col-xs-12.col-sm-6.col-sm-offset-3
-              %h4 Phone:
-              = f.text_field :phone, class: 'form-control phone'
+              %h4 Testimony:
+              = f.text_area :testimony, rows: 5, class: 'form-control'
+          %hr
+          .row
+            .col-xs-12.col-sm-6.col-sm-offset-3
+              %h4
+                Comments:
+              %em (Feedback on event)
+              = f.text_area :comments, rows: 5, class: 'form-control'
           .row.form-actions
             .col-xs-12.col-sm-6.col-sm-offset-3
               = f.submit 'Submit', class: 'btn btn-default'
 
+        -#   Register
+        -#
+        -# = form_for attendee, html: { class: 'form-horizontal' } do |f|
+        -#   .row
+        -#     .col-xs-12.col-sm-6.col-sm-offset-3
+        -#       %h4 First Name:
+        -#       = f.text_field :first_name, class: 'form-control'
+        -#   .row
+        -#     .col-xs-12.col-sm-6.col-sm-offset-3
+        -#       %h4 Last Name:
+        -#       = f.text_field :last_name, class: 'form-control'
+        -#   .row
+        -#     .col-xs-12.col-sm-6.col-sm-offset-3
+        -#       %h4 Email:
+        -#       = f.text_field :email, class: 'form-control'
+        -#   .row
+        -#     .col-xs-12.col-sm-6.col-sm-offset-3
+        -#       %h4 Phone:
+        -#       = f.text_field :phone, class: 'form-control phone'
+        -#   .row.form-actions
+        -#     .col-xs-12.col-sm-6.col-sm-offset-3
+        -#       = f.submit 'Submit', class: 'btn btn-default'
+
 :javascript
-  $("#new_attendee").validate({
+  $("#new_testimony").validate({
       rules: {
-      "attendee[first_name]": {required: true},
-      "attendee[last_name]": {required: true},
-      "attendee[email]": {required: true, email: true},
-      "attendee[phone]": {required: true}
+      "testimony[first_name]": {required: true},
+      "testimony[last_name]": {required: true},
+      "testimony[email]": {required: true, email: true},
+      "testimony[testimony]": {required: true}
     }
   });
-  $('.phone').mask('(000) 000-0000');
+-# $('.phone').mask('(000) 000-0000');

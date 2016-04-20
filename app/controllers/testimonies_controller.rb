@@ -1,4 +1,4 @@
-class testimonysController < ApplicationController
+class TestimoniesController < ApplicationController
   expose(:testimony, attributes: :testimony_params)
 
   def create
